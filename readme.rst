@@ -1,4 +1,8 @@
 ###################
+THIS REPO SHOULD NOT BE COPIED OR USED, IT's MY PLAYGROUND - USE at your own risk
+###################
+
+###################
 What is CodeIgniter
 ###################
 
