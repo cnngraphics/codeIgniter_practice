@@ -1,0 +1,13 @@
+@media only screen and (max-width: 600px) {
+    .navbar-nav .nav-link {
+		padding-right: 0;
+		padding-left: 0;
+		padding-top: 10px;
+		border-bottom: 1px solid black;
+	}
+	
+}
+
+.main-content{
+	padding-top: 3.5rem;
+}
