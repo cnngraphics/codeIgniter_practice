@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/custom.min.css">
 	<!-- MUST BE ADDED LAST - You know about cascading style sheets right?-->
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/really-custom.css">
+	<link rel="stylesheet" href="<?=base_url()?>assets/css/font-awesome.min.css">
 
 </head>
 <style>
@@ -35,7 +36,9 @@
 						</span>
 					</li>
 					<li class="nav-item">
-                        <a class="nav-link" href="<?=site_url()?>/create_purchases">Add Record</a>
+					<span class="nav-link">
+							<?php echo anchor('purchases/create','Add Purchases');?>
+						</span>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
