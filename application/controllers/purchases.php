@@ -24,17 +24,30 @@ class Purchases extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function create_purchases(){
+	public function create(){
 		
-		$this->load->model('purchases_model');
-		
+		// $this->load->model('purchases_model');
 		$this->load->helper('form');
-
 		$this->load->library('form_validation');
 
-		
+		//set the validation rules
+		$this->form_validation->set_rules('date','Purchase Date', 'Required');
+		$this->form_validation->set_rules('description', 'Description', 'required');
+		$this->form_validation->set_rules('price','Item Price', 'Required');
+
+		//check the form is valid
+		if($this->form_validation->run() == FALSE){
+			$this->load->view('header');
+			$this->load->view('purchase_form_view');
+			$this->load->view('footer');
+		} else {
+			$this->load->view('header');
+			$this->load->view('purchase_success_view');
+			$this->load->view('footer');
+		}
+
 		$data_to_insert = $_POST;
-		$this->purchases_model->create($data_to_insert);
+		// $this->purchases_model->create($data_to_insert);
 	}
 	public function seed(){
 		exit('Already inserted');
